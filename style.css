@@ -22,6 +22,7 @@ nav {
 
     position: sticky;
     top: 0;
+    z-index: 1000;
 }
 
 nav ul {
@@ -66,30 +67,33 @@ nav ul li a:hover {
 }
 
 .hero-text p {
-    margin: 15px 0;
+    margin: 18px 0;
+    font-size: 19px;
 }
 
 .hero-img img {
     width: 260px;
     border-radius: 50%;
-    border: 5px solid white;
+    border: 6px solid white;
 }
 
 /* Button */
 .btn {
+    display: inline-block;
+
     background: linear-gradient(45deg, #00c6ff, #0072ff);
     color: white;
 
-    padding: 12px 25px;
+    padding: 12px 28px;
     text-decoration: none;
-    border-radius: 25px;
+    border-radius: 30px;
+    margin-top: 18px;
 
-    display: inline-block;
-    margin-top: 15px;
+    font-weight: bold;
 }
 
 .btn:hover {
-    opacity: 0.9;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
 }
 
 /* Sections */
@@ -98,36 +102,44 @@ nav ul li a:hover {
     text-align: center;
 }
 
+.section h2 {
+    font-size: 34px;
+    margin-bottom: 35px;
+}
+
 .bg {
-    background: #f5f7fa;
+    background: #f0f4f8;
 }
 
 /* About */
 .about-box {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    align-items: center;
+    gap: 45px;
     flex-wrap: wrap;
 }
 
 .about-box img {
-    width: 220px;
+    width: 230px;
     border-radius: 15px;
 }
 
 /* Skills */
 .skills-box {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 15px;
 }
 
 .skills-box span {
-    background: #0072ff;
+    background: linear-gradient(45deg, #ff512f, #dd2476);
     color: white;
-    padding: 10px 20px;
-    border-radius: 20px;
+
+    padding: 10px 22px;
+    border-radius: 25px;
+    font-weight: 600;
 }
 
 /* Projects */
@@ -135,6 +147,7 @@ nav ul li a:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(230px, 280px));
     gap: 25px;
+
     justify-content: center;
 }
 
@@ -142,30 +155,34 @@ nav ul li a:hover {
     background: white;
     padding: 25px;
     border-radius: 15px;
+
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+    transition: 0.3s;
 }
 
 .project:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
 }
 
-/* ================= SERVICES ================= */
-
+/* Services */
 .services {
     padding: 70px 10%;
-    background: white;
+    background: #f5f7fa;
     text-align: center;
 }
 
 .service-box {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 280px));
     gap: 25px;
+
+    justify-content: center;
 }
 
 .box {
     background: white;
-    padding: 30px;
+    padding: 30px 25px;
     border-radius: 15px;
 
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -183,22 +200,27 @@ nav ul li a:hover {
 
 /* Contact */
 .contact-box p {
-    margin: 10px 0;
+    font-size: 18px;
+    margin: 12px 0;
 }
 
 /* Footer */
 footer {
-    background: #141e30;
+    background: linear-gradient(90deg, #141e30, #243b55);
     color: white;
-    padding: 15px;
     text-align: center;
+    padding: 18px;
 }
 
 /* Responsive */
-@media(max-width:768px){
+@media (max-width: 768px) {
 
     nav {
         flex-direction: column;
+    }
+
+    nav ul {
+        margin-top: 10px;
     }
 
     .hero {
@@ -207,7 +229,7 @@ footer {
     }
 
     .hero-img {
-        margin-top: 20px;
+        margin-top: 25px;
     }
 
 }
